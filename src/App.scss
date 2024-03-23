@@ -1,0 +1,308 @@
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+// Header
+
+.header {
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding-bottom: 5px;
+  z-index: 1;
+
+  div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      height: 27px;
+      margin-left: 20px;
+    }
+
+
+    .downarrow {
+      height: 5px;
+      width: 10px;
+      margin-right: 20px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 36px;
+        height: 36px;
+      }
+
+      p {
+        font-family: Work Sans;
+        font-size: 15px;
+
+        span {
+          font-family: Work Sans;
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 11.73px;
+          letter-spacing: 0.10000000149011612px;
+          text-align: left;
+          color: rgba(0, 0, 0, 1);
+
+        }
+      }
+
+      span {
+        font-family: Work Sans;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.73px;
+        letter-spacing: 0.10000000149011612px;
+        text-align: left;
+        color: rgba(250, 120, 47, 1);
+        ;
+      }
+    }
+  }
+}
+
+// Home
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  position: relative;
+  top: 60px;
+
+  // sidebar
+  .sidebar {
+    width: 241px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+
+    #line {
+      width: 180px;
+      position: fixed;
+      top: 75px;
+      left: 20px;
+    }
+
+    .upperdiv {
+      position: fixed;
+      top: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .lowerdiv {
+      position: fixed;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    div {
+
+      div {
+        position: relative;
+        left: 20px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 28px;
+          height: 28px;
+        }
+
+        font-family: Work Sans;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 26.85px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: rgba(196, 196, 196, 1);
+
+      }
+
+      #collapse {
+        color: black;
+      }
+
+      #projects {
+        color: rgba(250, 120, 47, 1);
+        ;
+      }
+    }
+  }
+
+  // slider
+  .slider {
+    height: 100vh;
+    width: 20px;
+    background-color: white;
+
+    img {
+      position: fixed;
+      height: 20px;
+      top: 50vh;
+      left: 0px;
+    }
+  }
+
+  // myprojects
+  .myprojects {
+    width: calc(100vw - 241px);
+    height: max-content;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    min-height: 100vh;
+
+
+    .project-cards {
+      width: 400px;
+      height: 265px;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Work Sans;
+      font-size: 18px;
+      .delete {
+        height: 16px; 
+        width: fit-content;
+        position: relative;
+        left :100px;
+        &:hover{
+          top: -2px;
+        }
+      }
+      div{
+        display: flex;
+        img {
+          width: 360px;
+          height: 180px;
+          border-radius: 10px;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .addprojectscomp {
+      width: 400px;
+      height: 265px;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+
+    .add {
+      z-index: 1;
+      background-color: white;
+      position: absolute;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      font-family: Work Sans;
+      color: black;
+      margin: 20px;
+      font-size: 18px;
+      border: 1px solid white;
+
+      button {
+        border-radius: 5px;
+        border: 0;
+        width: 80px;
+        height: 30px;
+        font-size: 16px;
+        background-color: blue;
+        color: white;
+
+        &:hover {
+          background-color: darkblue;
+        }
+      }
+
+      input {
+        border-radius: 5px;
+        height: 30px;
+        border: 1px solid black;
+        width: 200px;
+        background: rgba(250, 120, 47, 0.4);
+
+      }
+
+      textarea {
+        border-radius: 5px;
+        border: 1px solid black;
+        height: 100px;
+        width: 200px;
+        background: rgba(250, 120, 47, 0.4);
+
+      }
+
+      label {
+        padding-bottom: 0px;
+      }
+
+    }
+  }
+}
+
+
+
+@media screen and (max-width:700px) {
+  .home {
+    .myprojects {
+      .addprojectscomp {
+        width: 320px;
+        height: fit-content;
+      }
+
+      .project-cards {
+        width: 320px;
+        height: fit-content;
+        margin-top: 20px;
+        margin-left: 20px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        div{
+        img {
+          width: 290px;
+          height: 180px;
+          border-radius: 10px;
+          margin-top: 20px;
+        }
+      }
+      }
+    }
+  }
+}

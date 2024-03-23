@@ -1,0 +1,256 @@
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.header {
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding-bottom: 5px;
+  z-index: 1;
+}
+.header div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.header div .logo {
+  height: 27px;
+  margin-left: 20px;
+}
+.header div .downarrow {
+  height: 5px;
+  width: 10px;
+  margin-right: 20px;
+}
+.header div div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+}
+.header div div img {
+  width: 36px;
+  height: 36px;
+}
+.header div div p {
+  font-family: Work Sans;
+  font-size: 15px;
+}
+.header div div p span {
+  font-family: Work Sans;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11.73px;
+  letter-spacing: 0.1000000015px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+.header div div span {
+  font-family: Work Sans;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 11.73px;
+  letter-spacing: 0.1000000015px;
+  text-align: left;
+  color: rgb(250, 120, 47);
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  top: 60px;
+}
+.home .sidebar {
+  width: 241px;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+.home .sidebar #line {
+  width: 180px;
+  position: fixed;
+  top: 75px;
+  left: 20px;
+}
+.home .sidebar .upperdiv {
+  position: fixed;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.home .sidebar .lowerdiv {
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.home .sidebar div div {
+  position: relative;
+  left: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26.85px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: rgb(196, 196, 196);
+}
+.home .sidebar div div img {
+  width: 28px;
+  height: 28px;
+}
+.home .sidebar div #collapse {
+  color: black;
+}
+.home .sidebar div #projects {
+  color: rgb(250, 120, 47);
+}
+.home .slider {
+  height: 100vh;
+  width: 20px;
+  background-color: white;
+}
+.home .slider img {
+  position: fixed;
+  height: 20px;
+  top: 50vh;
+  left: 0px;
+}
+.home .myprojects {
+  width: calc(100vw - 241px);
+  height: -moz-max-content;
+  height: max-content;
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.home .myprojects .project-cards {
+  width: 400px;
+  height: 265px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Work Sans;
+  font-size: 18px;
+}
+.home .myprojects .project-cards .delete {
+  height: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  left: 100px;
+}
+.home .myprojects .project-cards .delete:hover {
+  top: -2px;
+}
+.home .myprojects .project-cards div {
+  display: flex;
+}
+.home .myprojects .project-cards div img {
+  width: 360px;
+  height: 180px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.home .myprojects .addprojectscomp {
+  width: 400px;
+  height: 265px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.home .myprojects .add {
+  z-index: 1;
+  background-color: white;
+  position: absolute;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  font-family: Work Sans;
+  color: black;
+  margin: 20px;
+  font-size: 18px;
+  border: 1px solid white;
+}
+.home .myprojects .add button {
+  border-radius: 5px;
+  border: 0;
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  background-color: blue;
+  color: white;
+}
+.home .myprojects .add button:hover {
+  background-color: darkblue;
+}
+.home .myprojects .add input {
+  border-radius: 5px;
+  height: 30px;
+  border: 1px solid black;
+  width: 200px;
+  background: rgba(250, 120, 47, 0.4);
+}
+.home .myprojects .add textarea {
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 100px;
+  width: 200px;
+  background: rgba(250, 120, 47, 0.4);
+}
+.home .myprojects .add label {
+  padding-bottom: 0px;
+}
+
+@media screen and (max-width: 700px) {
+  .home .myprojects .addprojectscomp {
+    width: 320px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .home .myprojects .project-cards {
+    width: 320px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .myprojects .project-cards div img {
+    width: 290px;
+    height: 180px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=App.css.map */
